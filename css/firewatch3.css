@@ -1,0 +1,770 @@
+@charset "utf-8";
+
+/*	
+	COLORS:
+	Dark purple 	=	rgb( 45, 17, 45)	=	#2D112B 
+	Light peach		=	rgb(254,220,200)	=	#FEDCC8
+*/
+
+/* Start small. These styles apply to everything. */
+*
+{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	color: inherit;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: normal;
+}
+
+html
+{
+}
+
+body
+{
+	background-color: skyblue;
+	color: #c9293e;
+	background-image: none;
+	
+	background-attachment: fixed;
+	font-weight: 400;
+	font-style: normal;
+	position: relative;
+}
+
+/* ! Trailer */
+
+body.trailer
+{
+	overflow: hidden;
+}
+
+body.trailer div#main
+{
+	display: none;	
+}
+
+div#blackout
+{
+	display: none;
+}
+
+body.trailer div#blackout
+{
+	z-index: 200;
+	height: 100%;
+	width: 100%;
+		
+	background-color: #150b14;
+
+	display: block;
+	display: table;
+	position: fixed;
+	text-align: center;
+}
+
+body.trailer div#blackout div#video
+{
+	display: block;
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+body.trailer div#blackout div#video iframe
+{
+	display: block;
+	margin: 0 auto;
+	width: 284px;
+	height: 160px;
+}
+
+body.trailer div#blackout span#trailerButton
+{
+	display: block;
+	display: inline-block;
+	font-size: 24px;
+	opacity: 0.7;
+}
+
+
+span#trailerButton:hover
+{
+	cursor: pointer;
+	opacity: 1;
+}
+
+/*
+body.trailer div#blackout div#video:before
+{
+	display: block;
+	background-image: url("img/firewatch.png");
+	background-size: 392px 144px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 392px;
+	height: 144px;
+	margin: -20px auto 20px auto;
+	content: " ";
+	opacity: 0.5;
+}
+*/
+
+#parallax
+{
+	position: relative;
+	height: 840px;
+	z-index: 10;
+
+}
+
+.parallax_layer
+{
+	background-position: bottom center;
+	background-size: 3000px 455px;
+	background-repeat: repeat-x;
+	position: fixed;
+	height: 840px;
+	width: 100%;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+#container.touch .parallax_layer
+{
+	position: absolute;
+}
+
+#layer-0 { background-image: url("img/parallax0.png"); }
+#layer-1 { background-image: url("img/parallax1.png"); }
+#layer-2 { background-image: url("img/parallax2.png"); }
+#layer-3 { background-image: url("img/parallax3.png"); }
+#layer-4 { background-image: url("img/parallax4.png"); }
+#layer-5 { background-image: url("img/parallax5.png"); }
+
+#layer-6
+{
+	background-color: transparent;
+	background-image: url("img/parallax6.png");
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-image: url("img/parallax6.png"), -webkit-linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+	background-image: url("img/parallax6.png"), -moz-linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+	background-image: url("img/parallax6.png"), -ms-linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+	background-image: url("img/parallax6.png"), -o-linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+	background-image: url("img/parallax6.png"), linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+	background-position: center top, center bottom;
+	background-repeat: no-repeat, no-repeat;
+	height: 655px;
+	top: 385px;
+	margin-bottom: -255px;	
+}
+
+div#main
+{
+	position: relative;
+	width: 100%;
+	padding-bottom: 50px;
+	z-index: 15;
+	background-color: #2D112B;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-moz-transform: translate3d(0px, 0px, 0px);
+	-ms-transform: translate3d(0px, 0px, 0px);
+	-o-transform: translate3d(0px, 0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+/* 	overflow-x: hidden; */
+}
+
+#container.touch #main
+{
+	padding-top: 100px;	
+}
+
+h1
+{
+	text-align: center;
+	color: transparent;
+}
+
+
+h2,
+h3,
+h4,
+.datedetails
+{
+	margin: 0px;
+	text-align: center;
+	font-weight: normal;
+}
+
+h2
+{
+	margin-top: 100px;
+	font-size: 23px;
+	line-height: 23px;
+	color: #7d0032;
+}
+
+#container.touch h2
+{
+	margin-top: 0;
+}
+
+h3
+{
+	margin-top: 60px;
+	font-size: 28px;
+	line-height: 28px;
+	color: #c9293e;
+}
+h4
+{
+	margin-top: 60px;
+	margin-bottom: 100px;
+	font-size: 32px;
+	line-height: 32px;
+	color: #f97c49;
+}
+
+h1#firewatchLogo2
+{
+	background: url("img/firewatch-2.png");
+	background-size: 358px 131px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 131px;
+	width: 358px;
+	margin: 120px auto 70px auto;
+	text-indent: -9999px;
+	color: transparent;
+	zoom: 0.75;
+}
+
+h2#subtitle, h2.subtitle
+{
+	text-transform: uppercase;
+	color: #f97c49;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: normal;
+	margin-top: 50px;
+}
+.datedetails {
+	color: #f97c49;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+.datedetails strong {
+	text-transform: uppercase;
+}
+
+
+section#understory,
+section#links,
+section#blog,
+section#signup,
+footer
+{
+	margin: 0 auto;
+	text-align: center;
+}
+section#understory {
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+section#understory p
+{
+	font-size: 16px;
+	line-height: 1.4em;
+	margin-bottom: 1.2em;
+	display: block;
+	text-align: left;
+	padding: 0 5px;
+	text-align: justify;
+}
+
+section#understory p#intro
+{
+	font-size: 24px;
+	font-weight: bold;
+	margin: 24px auto;
+}
+.columns.disabled {
+	display: block;
+}
+.columns.enabled {
+	margin-bottom: -1em;
+	display: none;
+}
+.columns.enabled:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.column {
+	float: left;
+	width: 48%;
+	text-align: justify;
+	text-justify: inter-word;
+}
+	.column.left {
+		margin-right: 4%;
+	}
+
+section#blog
+{
+	margin: 50px auto;
+}
+
+/* ! Screenshots */
+
+section#screenshots, section#screenshots2, section#screenshots3, section#videos
+{
+	margin: 35px auto 15px auto;
+	position: relative;
+	overflow: hidden;
+}
+
+section#screenshots img, section#screenshots2 img, section#screenshots3 img
+{
+	width: 320px;
+	height: 180px;
+	margin: 20px auto;
+	display: block;
+}
+section#videos .video {
+	width: 320px;
+	height: 260px;
+	margin: 20px auto;
+	display: block;
+}
+.video img {
+	width: 320px;
+	height: 180px;
+}
+.video h5, .video h6 {
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1.6em;
+}
+.video h5 {
+	margin-top: 15px;
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-size: 15px;
+}
+.video h6 {
+	color: #7e001c;
+	font-size: 13px;
+	letter-spacing: 2px;
+}
+
+img#screenshot-trailer
+{ 
+	-webkit-transform: rotate(0.8deg);
+	-moz-transform: rotate(0.8deg);
+	-ms-transform: rotate(0.8deg);
+	-o-transform: rotate(0.8deg);
+	transform: rotate(0.8deg);
+}
+
+img#screenshot01, #trailer1 img
+{
+	-webkit-transform: rotate(-0.5deg);
+	-moz-transform: rotate(-0.5deg);
+	-ms-transform: rotate(-0.5deg);
+	-o-transform: rotate(-0.5deg);
+	transform: rotate(-0.5deg);
+}
+
+img#screenshot02, #trailer2 img
+{
+	-webkit-transform: rotate(-1deg);
+	-moz-transform: rotate(-1deg);
+	-ms-transform: rotate(-1deg);
+	-o-transform: rotate(-1deg);
+	transform: rotate(-1deg);
+}
+
+img#screenshot03, img#screenshot09
+{
+	-webkit-transform: rotate(0.4deg);
+	-moz-transform: rotate(0.4deg);
+	-ms-transform: rotate(0.4deg);
+	-o-transform: rotate(0.4deg);
+	transform: rotate(0.4deg);
+}
+
+img#screenshot04, img#screenshot10
+{
+	-webkit-transform: rotate(-0.8deg);
+	-moz-transform: rotate(-0.8deg);
+	-ms-transform: rotate(-0.8deg);
+	-o-transform: rotate(-0.8deg);
+	transform: rotate(-0.8deg);
+}
+
+img#screenshot05, img#screenshot11, #trailer3 img
+{
+	-webkit-transform: rotate(1deg);
+	-moz-transform: rotate(1deg);
+	-ms-transform: rotate(1deg);
+	-o-transform: rotate(1deg);
+	transform: rotate(1deg);
+}
+
+img#screenshot06, img#screenshot12
+{
+	-webkit-transform: rotate(-0.9deg);
+	-moz-transform: rotate(-0.9deg);
+	-ms-transform: rotate(-0.9deg);
+	-o-transform: rotate(-0.9deg);
+	transform: rotate(-0.9deg);
+}
+
+img#screenshot07, img#screenshot13
+{
+	-webkit-transform: rotate(-0.3deg);
+	-moz-transform: rotate(-0.3deg);
+	-ms-transform: rotate(-0.3deg);
+	-o-transform: rotate(-0.3deg);
+	transform: rotate(-0.3deg);
+}
+
+img#screenshot08, img#screenshot14
+{
+	-webkit-transform: rotate(0.2deg);
+	-moz-transform: rotate(0.2deg);
+	-ms-transform: rotate(0.2deg);
+	-o-transform: rotate(0.2deg);
+	transform: rotate(0.2deg);
+}
+
+/* ! Links */
+
+section#links,
+section#blog
+{
+	text-align: center;
+	width: 320px;
+	display: block;
+}
+
+section#links {
+	margin-top: 50px;
+}
+
+#linkBlog:hover
+{
+	color: #ff6c3f !important;
+}
+
+
+
+
+
+
+#linkMerchandise:hover,
+#linkFAQ:hover,
+#linkBlog:hover
+{
+	color: #ffdbc6 !important;	
+}
+
+section hr
+{
+	display: block;
+	width: 100%;
+	border: 0;
+	height: 3px;
+	background: #7d0032;
+	margin: 50px 0 60px 0;
+}
+
+hr#forest
+{
+	background-repeat: no-repeat;
+	background-size: 1953px 289px;
+	background-position: center center;
+	background-image: url("img/forest-transparent2.png");
+	height: 289px;
+	border: 0;
+	zoom: 0.5;
+}
+
+/* ! Sign-up */
+
+#signup
+{
+	text-align: center;
+	padding-bottom: 2em;
+}
+
+#signup h3
+{
+	font-size: 16px;
+	line-height: 16px;
+}
+
+#signup label
+{
+	display: none;
+}
+
+#signup button
+{
+	margin-top: 0px;
+	cursor: pointer;
+}
+
+#signup,
+#signup form,
+#signup fieldset,
+#signup input,
+#signup button,
+span#trailerButton
+{
+	font-family: 'Verlag A', 'Verlag B', Verlag;
+	font-weight: 400;
+	font-size: 16px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	border: 0;
+}
+
+#signup #fieldEmail,
+#signup #fieldName,
+#signup button,
+span#trailerButton
+{
+display: inline;
+display: inline-block;
+margin: 0 5px;
+border: 0;
+border-radius: 2px;
+padding: 4px 8px;
+}
+#signup #fieldEmail,
+#signup #fieldName,
+span#trailerButton
+#signup #fieldName
+{
+background: #520331;
+color: #fddcc9;
+}
+
+span#trailerButton
+{
+margin-top: 25px;
+color: #dd433a;
+}
+
+#signup #fieldEmail
+{
+width: 150px;
+}
+
+#signup #fieldName
+{
+width: 100px;
+}
+
+#signup button,
+span#trailerButton
+#signup button
+{
+margin-top: 25px;
+background: #fc5944;
+color: #2d122c;
+}
+
+#signup button:active,
+span#trailerButton:active
+span#trailerButton
+{
+margin-top: 25px;
+color: #dd433a;
+}
+
+#signup button:active
+{
+background: #fedbc7;
+}
+
+span#trailerButton:active
+{
+color: #fec65a;
+}
+
+#signup input::-webkit-input-placeholder { color: #915155; }
+#signup input:-moz-placeholder { /* Firefox 18- */ color: #915155; }
+#signup input::-moz-placeholder { /* Firefox 19+ */ color: #915155; }
+#signup input:-ms-input-placeholder { color: #915155; }
+
+
+footer p
+{
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+#firewatchFaq header, #firewatchThanks header
+{
+	margin-top: 6em;
+	margin-bottom: 6em;
+}
+
+/* ! Footer */
+	
+footer
+{
+	background-color: #2D112B;
+}
+
+.logo
+{
+	display: inline-block;
+	background-repeat: no-repeat;
+	margin: 0px 25px 2em 35px;
+	color: transparent;
+	text-indent: -9999px;	
+}
+
+
+
+/* ! Medium width */
+@media screen and (min-device-width: 510px)
+{
+/* 	html { border-top: 5px solid blue; } */
+	
+
+	h2#subtitle, h2.subtitle
+	{
+		text-transform: uppercase;
+		color: #f97c49;
+		font-size: 34px;
+		line-height: 35px;
+		font-weight: normal;
+	}	
+	
+	.datedetails {
+		font-size: 15.4px;
+	}
+
+	section#understory,
+	section#blog,
+	section#signup,
+	footer
+	{
+		width: 560px;
+	}
+	
+	section#understory
+	{
+
+	}
+	
+	section#understory p
+	{
+		font-size: 16px;
+		line-height: 1.3em;
+		margin-bottom: 1.2em;
+		display: block;
+		text-align: left;
+	}
+	
+	section#understory p#intro
+	{
+		font-size: 24px;
+
+	}
+	
+	.columns.enabled {
+		display: block;
+	}
+	.columns.disabled {
+		display: none;
+	}
+
+	hr#forest { zoom: 1; }
+}
+
+/* ! Full width */
+@media screen and (min-device-width: 838px)
+{
+/* 	html { border-top: 5px solid green; } */
+
+	body.trailer div#blackout div#video iframe
+	{
+		display: block;
+		margin: 0 auto;
+		width: 853px;
+		height: 480px;
+	}
+	section hr {
+		width: 560px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+@media screen and (max-width: 600px) {
+	section#understory {
+		width: 95%;
+	}
+	.columns.enabled {
+		display: none;
+	}
+	.columns.disabled {
+		display: block;
+		width: 100%;
+	}
+
+	h2.subtitle {
+		font-size: 42px;
+		line-height: 50px;
+	}
+	p.datedetails {
+		font-size: 19px;
+		line-height: 29px;
+	}
+}
+
+/* Retina Devices */
+@media screen and (-webkit-device-pixel-ratio: 2)
+{
+	body.trailer div#blackout div#video:before { background-image: url("img/firewatch@2x.png"); }
+	h1#firewatchlogo { background-image: url("img/firewatch@2x.png"); }
+	#layer-0 { background-image: url("img/parallax0@2x.png"); }
+	#layer-1 { background-image: url("img/parallax1@2x.png"); }
+	#layer-2 { background-image: url("img/parallax2@2x.png"); }
+	#layer-3 { background-image: url("img/parallax3@2x.png"); }
+	#layer-4 { background-image: url("img/parallax4@2x.png"); }
+	#layer-5 { background-image: url("img/parallax5@2x.png"); }
+	#layer-6
+	{
+		background-image: url("img/parallax6@2x.png"), -webkit-linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+		background-image: url("img/parallax6@2x.png"), -moz-linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+		background-image: url("img/parallax6@2x.png"), -ms-linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+		background-image: url("img/parallax6@2x.png"), -o-linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+		background-image: url("img/parallax6@2x.png"), linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);		
+	}
+	h1#firewatchLogo2 { background-image: url("img/firewatch@2x.png"); }
+	#linkBlog {	background-image: url("img/skull@2x.png"); }
+	#linkMerchandise { background-image: url("img/merchandise-2@2x.png"); }
+	#linkFAQ { background-image: url("img/faq@2x.png"); }
+	hr#forest { background-image: url("img/forest-transparent2@2x.png"); }
+	#logoCampoSanto { background-image: url("img/logo-camposanto@2x.png"); }
+	#logoPanic { background-image: url("img/logo-panic@2x.png"); }
+
+}

@@ -1,0 +1,25 @@
+.water {
+     background-color: white;
+     height: 400px;
+}
+.margin {
+     background-color: #000F00;
+     height: 400px;
+}
+.force {
+     position: absolute;
+     z-index: 15;
+     
+}
+.pad {
+     padding-top:  1px;
+     
+}
+#footer {
+     width: 100%;
+     height: 100px;
+     z-index: 15;
+}
+#cpr {
+     padding-top: 25px;
+}
